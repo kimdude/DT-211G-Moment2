@@ -11,6 +11,7 @@ closeBtn.addEventListener('click', displayMenu);
 //Display schedule when window onload
 window.onload = displaySchedule();
 
+//Toggle main menu i mobile-version
 function displayMenu() {
     const style = window.getComputedStyle(mainMenu);
 
