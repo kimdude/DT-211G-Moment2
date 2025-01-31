@@ -1,0 +1,16 @@
+{
+  "name": "dt-211g-moment2",
+  "version": "1.0.0",
+  "author": "Kim Dudenhöfer",
+  "license": "ISC",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
+  }
+}
