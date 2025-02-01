@@ -278,6 +278,10 @@ td {
 
 /* Screens under 450px */
 @media only screen and (max-width: 450) {
+    /* Home-page */
     #quickMenu { flex-direction: column; }
     #quickMenu > li:not(:first-of-type) { margin: 10px 0 10px 0;}
+
+    /* Schedule-page */
+    td { padding: 10px; } 
 }
