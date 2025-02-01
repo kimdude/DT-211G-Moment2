@@ -6,6 +6,7 @@ const mainMenu = document.getElementById("navContainer");
 const courseCode = document.getElementById("courseCodes");
 const courseName = document.getElementById("courseNames");
 const courseProgress = document.getElementById("courseProgressions");
+const input = document.getElementById('filterSearch');
 
 //Adding eventlisteners
 openBtn.addEventListener('click', displayMenu);
@@ -13,6 +14,7 @@ closeBtn.addEventListener('click', displayMenu);
 courseCode.addEventListener('click', sortCode);
 courseName.addEventListener('click', sortName);
 courseProgress.addEventListener('click', sortProgress);
+input.addEventListener('input', inputFilter);
 
 //Display schedule when window onload
 window.onload = sendSchedule();
@@ -111,6 +113,21 @@ async function sortProgress() {
     });
 
     displaySchedule(sortedData)
+}
+
+async function inputFilter() {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+    
+    const inputValue = input.value.toLowerCase();
+    const data = await getSchedule();
+
+    const search = data.filter((data) => 
+        data.code.toLowerCase().includes(inputValue)||
+        data.coursename.toLowerCase().includes(inputValue)
+    );
+
+    displaySchedule(search);
 }
 
 //Adding data to table
