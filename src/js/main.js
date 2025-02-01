@@ -8,16 +8,28 @@ const courseName = document.getElementById("courseNames");
 const courseProgress = document.getElementById("courseProgressions");
 const input = document.getElementById('filterSearch');
 
-//Adding eventlisteners
+//Checking value of null and adding eventlisteners if variable exists
 openBtn.addEventListener('click', displayMenu);
 closeBtn.addEventListener('click', displayMenu);
-courseCode.addEventListener('click', sortCode);
-courseName.addEventListener('click', sortName);
-courseProgress.addEventListener('click', sortProgress);
-input.addEventListener('input', inputFilter);
+if(courseCode !== null) {
+    courseCode.addEventListener('click', sortCode);
+}
+if(courseCode !== null) {
+    courseName.addEventListener('click', sortName);
+}
+if(courseCode !== null) {
+    courseProgress.addEventListener('click', sortProgress);
+}
+if(courseCode !== null) {
+    input.addEventListener('input', inputFilter);
+}
 
 //Display schedule when window onload
-window.onload = sendSchedule();
+window.onload = () => {
+    if(courseCode !== null) {
+        sendSchedule() 
+    };
+}
 
 //Toggle main menu i mobile-version
 function displayMenu() {
