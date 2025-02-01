@@ -57,14 +57,14 @@
         <section>
             <h1>Webbutveckling - Ramschema</h1>
             <label for="filterSearch">Sök:</label>
-            <input type="text" id="filterSearch" name="filterSearch">
+            <input type="text" id="filterSearch" name="filterSearch" placeholder="Kurs">
             <!-- Tabell med schema -->
             <table id="scheduleTable">
                 <thead>
                     <tr>
-                        <td>Kurskod</td>
-                        <td>Namn</td>
-                        <td>Progression</td>
+                        <td id="courseCodes" title="Sortera efter kurskod">Kurskod</td>
+                        <td id="courseNames" title="Sortera efter kursnamn">Namn</td>
+                        <td id="courseProgressions" title="Sortera efter kursprogression">Pro&shy;gres&shy;sion</td>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
