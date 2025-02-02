@@ -237,8 +237,11 @@ td {
     #quickMenu > li > a::after { color: #74c365; }
 
     /* schedule-page */
-    table { background-color: #74c365; color: #000; box-shadow: 2px 2px 15px rgb(155, 155, 155); }
-    tr:hover:not(thead > tr) { background-color: #56a547; }
+    label { color: #000; }
+    #filterSearch { box-shadow: 1px 1px 5px rgb(155, 155, 155); }
+    table { background-color: #ffffff; color: #000; box-shadow: 2px 2px 15px rgb(155, 155, 155); }
+    thead { background-color: #74c365;}
+    tr:hover:not(thead > tr) { background-color: #dbe64c; }
 }
 
 /* Screens under 1200px */
